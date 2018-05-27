@@ -8,7 +8,7 @@
     tools:context="com.example.gamesmannna.trytestapp.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtSlogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="66dp"
@@ -22,27 +22,37 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:layout_constraintVertical_bias="0.391" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/SignInButton"
         android:layout_width="221dp"
         android:layout_height="92dp"
         android:layout_marginBottom="34dp"
         android:text="Войти"
+        android:textColor="@android:color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColorLink="@android:color/darker_gray"
+        app:shadowColor="@color/colorPrimaryDark"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"
+        app:cornerRadius="34dp"
         app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSlogan" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/SignUpButton"
         style="@android:style/Widget.DeviceDefault.Button.Small"
         android:layout_width="221dp"
         android:layout_height="92dp"
         android:layout_marginBottom="117dp"
         android:text="Зарегистрироваться"
+        android:textColor="@android:color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:shadowColor="@color/colorPrimaryDark"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"
+        app:cornerRadius="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,8 +65,8 @@
         android:layout_marginBottom="23dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/txtSlogan"
+        app:layout_constraintStart_toStartOf="@+id/txtSlogan"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/camera" />
 
