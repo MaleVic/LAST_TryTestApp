@@ -1,5 +1,6 @@
 package com.example.gamesmannna.trytestapp;
 
+
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class SignIn extends AppCompatActivity {
 EditText edtPhone, edtPassword;
 Button SignInButton;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,9 +30,10 @@ Button SignInButton;
 
         edtPassword = (EditText) findViewById(R.id.edtPassword);
         edtPhone = (EditText) findViewById(R.id.edtPhone);
-        SignInButton = (Button) findViewById(R.id.SignUpButton);
+        SignInButton = (Button) findViewById(R.id.SignInButton);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+       final FirebaseDatabase database = FirebaseDatabase.getInstance();
        final DatabaseReference table_user = database.getReference("User") ;
 
         SignInButton.setOnClickListener(new View.OnClickListener() {
@@ -55,12 +59,13 @@ Button SignInButton;
                         else
 
                         {
-                            Toast.makeText(SignIn.this, "Ошибка входа", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignIn.this, "Неверный пароль", Toast.LENGTH_SHORT).show();
                         }
 
                         }
                         else
                         {
+                            mDialog.dismiss();
                             Toast.makeText(SignIn.this, "Такой пользователь не существует", Toast.LENGTH_SHORT).show();
                         }
                     }

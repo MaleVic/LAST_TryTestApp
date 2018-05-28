@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/glasses_background2"
-    tools:context="com.example.gamesmannna.trytestapp.SignIn"
+    tools:context="com.example.gamesmannna.trytestapp.SignUp"
     tools:layout_editor_absoluteY="25dp">
 
 
@@ -13,35 +13,39 @@
         android:id="@+id/edtPhone"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
         android:hint="Введите номер телефона"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edtName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="124dp" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="38dp"
         android:ems="10"
         android:hint="Введите пароль"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/SignInButton"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/edtName"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="264dp" />
 
     <info.hoang8f.widget.FButton
-        android:id="@+id/SignInButton"
+        android:id="@+id/SignUpButton"
         android:layout_width="221dp"
-        android:layout_height="92dp"
-        android:layout_marginBottom="284dp"
-        android:text="Войти"
+        android:layout_height="91dp"
+        android:layout_marginBottom="220dp"
+        android:text="Зарегистрироваться"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorPrimaryDark"
         android:textColorLink="@android:color/darker_gray"
@@ -53,6 +57,23 @@
         app:layout_constraintTop_toBottomOf="@+id/edtPassword"
         app:shadowColor="@color/colorPrimaryDark"
         app:shadowEnabled="true"
-        app:shadowHeight="5dp" />
+        app:shadowHeight="5dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="347dp" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Введите ваше имя"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPhone"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="195dp" />
 
 </android.support.constraint.ConstraintLayout>
