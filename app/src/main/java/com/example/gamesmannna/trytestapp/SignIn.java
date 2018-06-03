@@ -2,6 +2,7 @@ package com.example.gamesmannna.trytestapp;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.rengwuxian.materialedittext.MaterialEditText;
+
+import com.example.gamesmannna.trytestapp.Common.Common;
 
 public class SignIn extends AppCompatActivity {
 EditText edtPhone, edtPassword;
@@ -53,7 +55,10 @@ Button SignInButton;
                         User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
                         if (user.getpassword().equals(edtPassword.getText().toString()))
                         {
-                            Toast.makeText(SignIn.this, "Вход подтверждён!", Toast.LENGTH_SHORT).show();
+                            Intent homeIntent = new Intent(SignIn.this, Home.class);
+                            Common.currentUser = user;
+                            startActivity(homeIntent);
+                            finish();
                         }
 
                         else
