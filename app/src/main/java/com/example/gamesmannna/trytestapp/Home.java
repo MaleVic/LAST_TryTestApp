@@ -123,7 +123,7 @@ public class Home extends AppCompatActivity
                      public void onClick(View view, int position, boolean isLongClick) {
                          //Toast.makeText(Home.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
                          Intent movieList = new Intent(Home.this, MovieList.class);
-                         movieList.putExtra("CategoryID", adapter.getRef(position).getKey());
+                         movieList.putExtra("Category", adapter.getRef(position).getKey());
                          startActivity(movieList);
                      }
                  });
