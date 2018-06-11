@@ -5,17 +5,18 @@ package com.example.gamesmannna.trytestapp.Model;
  */
 
 public class Movie {
-   private String Name,Image, Price, Discount, MenuID;
+   private String Name,Image, Price, Discount, MenuID, Description;
 
     public Movie() {
     }
 
-    public Movie(String name, String image, String price, String discount, String menuID) {
+    public Movie(String name, String image, String price, String discount, String menuID, String description) {
         Name = name;
         Image = image;
         Price = price;
         Discount = discount;
         MenuID = menuID;
+        Description = description;
     }
 
     public String getName() {
@@ -48,6 +49,14 @@ public class Movie {
 
     public void setDiscount(String discount) {
         Discount = discount;
+    }
+
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    public String getDescription() {
+        return Description;
     }
 
     public String getMenuID() {

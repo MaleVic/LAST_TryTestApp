@@ -1,5 +1,6 @@
 package com.example.gamesmannna.trytestapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -69,7 +70,10 @@ public class MovieList extends AppCompatActivity {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(MovieList.this, ""+local.getName(), Toast.LENGTH_SHORT).show();
+
+                        Intent movieDetail = new Intent(MovieList.this, MovieDetail.class);
+                        movieDetail.putExtra("MovieId", adapter.getRef(position).getKey());
+                        startActivity(movieDetail);
                     }
                 });
             }
