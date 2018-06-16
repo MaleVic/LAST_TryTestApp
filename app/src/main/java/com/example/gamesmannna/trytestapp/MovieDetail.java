@@ -4,11 +4,15 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.example.gamesmannna.trytestapp.Database.Database;
 import com.example.gamesmannna.trytestapp.Model.Movie;
+import com.example.gamesmannna.trytestapp.Model.Order;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +33,8 @@ public class MovieDetail extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference movies;
 
+    Movie currentMovie;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +45,21 @@ public class MovieDetail extends AppCompatActivity {
 
         numberButton = (ElegantNumberButton) findViewById(R.id.number_button);
         btnCart = (FloatingActionButton) findViewById(R.id.btnCart);
+
+        btnCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Database(getBaseContext()).addToCart(new Order(
+                        movieId,
+                        currentMovie.getName(),
+                        numberButton.getNumber(),
+                        currentMovie.getPrice(),
+                        currentMovie.getDiscount()
+                ));
+
+                Toast.makeText(MovieDetail.this, "Добавлено в Корзину", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         movie_description = (TextView) findViewById(R.id.movie_description);
         movie_name = (TextView) findViewById(R.id.movie_name);
@@ -62,18 +83,18 @@ public class MovieDetail extends AppCompatActivity {
         movies.child(movieId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Movie movie = dataSnapshot.getValue(Movie.class);
+                currentMovie = dataSnapshot.getValue(Movie.class);
 
-                Picasso.with(getBaseContext()).load(movie.getImage())
+                Picasso.with(getBaseContext()).load(currentMovie.getImage())
                         .into(movie_image);
 
-                collapsingToolbarLayout.setTitle(movie.getName());
+                collapsingToolbarLayout.setTitle(currentMovie.getName());
 
-                movie_price.setText(movie.getPrice());
+                movie_price.setText(currentMovie.getPrice());
 
-                movie_name.setText(movie.getName());
+                movie_name.setText(currentMovie.getName());
 
-                movie_description.setText(movie.getDescription());
+                movie_description.setText(currentMovie.getDescription());
             }
 
             @Override

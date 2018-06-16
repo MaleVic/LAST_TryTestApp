@@ -7,13 +7,23 @@ package com.example.gamesmannna.trytestapp.Model;
 public class User {
     private String name;
     private String password;
+    private String phone;
 
     public User() {
     }
 
-    public User(String Pname, String Ppassword) {
+    public User(String Pname, String Ppassword, String Pphone) {
         name = Pname;
         password = Ppassword;
+
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getName() {

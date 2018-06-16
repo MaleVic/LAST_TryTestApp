@@ -12,21 +12,21 @@
 
         <ImageView
             android:id="@+id/movie_image"
-            android:scaleType="centerCrop"
-            android:src="@drawable/cinema_art_background2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cinema_art_background2" />
 
         <TextView
             android:id="@+id/movie_name"
-            android:text="Название фильма"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="#4f0e0d0e"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:gravity="center"
+            android:text="Название фильма"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 

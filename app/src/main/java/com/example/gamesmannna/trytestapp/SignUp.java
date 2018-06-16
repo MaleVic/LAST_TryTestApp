@@ -53,7 +53,7 @@ public class SignUp extends AppCompatActivity {
 
                         {
                             mDialog.dismiss();
-                            User user = new User (edtName.getText().toString(),edtPassword.getText().toString());
+                            User user = new User (edtName.getText().toString(),edtPassword.getText().toString(),edtPhone.getText().toString());
                             table_user.child(edtPhone.getText().toString()).setValue(user);
                             Toast.makeText(SignUp.this, "Регистрация прошла успешно!",Toast.LENGTH_SHORT).show();
                             finish();

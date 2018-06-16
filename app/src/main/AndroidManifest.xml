@@ -25,7 +25,8 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme" />
         <activity android:name=".MovieList" />
-        <activity android:name=".MovieDetail"></activity>
+        <activity android:name=".MovieDetail" />
+        <activity android:name=".Cart"></activity>
     </application>
 
 </manifest>
