@@ -129,7 +129,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
                         app:backGroundColor="@android:color/white"
-                        app:finalNumber="20"
+                        app:finalNumber="2"
                         app:initialNumber="1"
                         app:textColor="@android:color/black"
                         app:textSize="8sp"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
