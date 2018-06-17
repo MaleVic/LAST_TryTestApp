@@ -13,6 +13,7 @@ import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.gamesmannna.trytestapp.Database.Database;
 import com.example.gamesmannna.trytestapp.Model.Movie;
 import com.example.gamesmannna.trytestapp.Model.Order;
+import com.example.gamesmannna.trytestapp.ViewHolder.Constants;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -71,7 +72,7 @@ public class MovieDetail extends AppCompatActivity {
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.CollapseAppbar);
 
         if(getIntent() != null)
-            movieId = getIntent().getStringExtra("MovieId");
+            movieId = getIntent().getStringExtra(Constants.MOVIE_ID);
         if(!movieId.isEmpty())
         {
             getDetailMovie(movieId);
