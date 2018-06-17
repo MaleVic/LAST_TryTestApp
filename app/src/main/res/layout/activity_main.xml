@@ -65,11 +65,10 @@
         android:layout_width="wrap_content"
         android:layout_height="142dp"
         android:layout_marginBottom="23dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/txtSlogan"
         app:layout_constraintStart_toStartOf="@+id/txtSlogan"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/camera" />
+        app:srcCompat="@drawable/camera_logo" />
 
 </android.support.constraint.ConstraintLayout>

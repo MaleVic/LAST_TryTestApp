@@ -11,9 +11,12 @@ private String phone;
 private String name;
 private String address;
 private String total;
+private String status;
 private List<Order> movies;
 
     public Request() {
+
+        this.status = "0";
     }
 
     public Request(String phone, String name, String address, String total, List<Order> movies) {
@@ -22,6 +25,16 @@ private List<Order> movies;
         this.address = address;
         this.total = total;
         this.movies = movies;
+        //this.status = "0";
+    }
+
+    public String getStatus() {
+       //this.status = "0";
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getPhone() {
