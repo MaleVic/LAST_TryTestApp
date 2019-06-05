@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/edtPhone"
+        android:id="@+id/edtRegPhone"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="26dp"
@@ -18,7 +18,7 @@
         android:ems="10"
         android:hint="Введите номер телефона"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/edtName"
+        app:layout_constraintBottom_toTopOf="@+id/edtRegName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
         tools:layout_editor_absoluteY="124dp" />
 
     <EditText
-        android:id="@+id/edtPassword"
+        android:id="@+id/edtRegPassword"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="38dp"
@@ -36,7 +36,7 @@
         app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtName"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegName"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="264dp" />
 
@@ -54,7 +54,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegPassword"
         app:shadowColor="@color/colorPrimaryDark"
         app:shadowEnabled="true"
         app:shadowHeight="5dp"
@@ -62,17 +62,17 @@
         tools:layout_editor_absoluteY="347dp" />
 
     <EditText
-        android:id="@+id/edtName"
+        android:id="@+id/edtRegName"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="Введите ваше имя"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/edtRegPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPhone"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegPhone"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="195dp" />
 

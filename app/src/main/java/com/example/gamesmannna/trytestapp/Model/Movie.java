@@ -1,16 +1,41 @@
 package com.example.gamesmannna.trytestapp.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Gamesmannna on 04.06.2018.
  */
 
 public class Movie {
-   private String Name,Image, Price, Discount, MenuID, Description;
+    @SerializedName("name")
+    private String Name;
+    @SerializedName("image")
+    private String Image;
+    @SerializedName("price")
+    private String Price;
+    @SerializedName("discount")
+    private String Discount;
+    @SerializedName("menuID")
+    private String MenuID;
+    @SerializedName("description")
+    private String Description;
+
+    public Integer getMovieID() {
+        return MovieID;
+    }
+
+    public void setMovieID(Integer movieID) {
+        MovieID = movieID;
+    }
+
+    @SerializedName("movieID")
+    private Integer MovieID;
 
     public Movie() {
     }
 
-    public Movie(String name, String image, String price, String discount, String menuID, String description) {
+    public Movie(Integer movieID,String name, String image, String price, String discount, String menuID, String description) {
+        MovieID=movieID;
         Name = name;
         Image = image;
         Price = price;

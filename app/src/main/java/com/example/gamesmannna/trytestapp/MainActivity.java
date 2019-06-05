@@ -7,11 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.gamesmannna.trytestapp.Common.Common;
+
 public class MainActivity extends AppCompatActivity {
 
     Button SignUpButton, SignInButton;
     TextView txtSlogan;
-
+    public  static Common Common;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         SignUpButton =(Button)findViewById(R.id.SignUpButton);
 
         txtSlogan = (TextView)findViewById(R.id.txtSlogan);
+
+        Common=new Common();
 
     SignInButton.setOnClickListener(new View.OnClickListener() {
         @Override

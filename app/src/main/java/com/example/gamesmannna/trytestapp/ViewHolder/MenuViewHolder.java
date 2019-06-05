@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.gamesmannna.trytestapp.Interface.ItemClickListener;
 import com.example.gamesmannna.trytestapp.R;
 
+import com.example.gamesmannna.trytestapp.Model.Category;
 
 
 /**
@@ -20,7 +21,10 @@ public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnCl
     public TextView txtMenuName;
     public ImageView imageView;
 
-   private ItemClickListener itemClickListener;
+
+    private ItemClickListener itemClickListener;
+
+
 
     public MenuViewHolder(View itemView) {
         super(itemView);
@@ -37,6 +41,6 @@ public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
     @Override
     public void onClick(View view) {
-itemClickListener.onClick(view, getAdapterPosition(),false);
-}
+        itemClickListener.onClick(view, getAdapterPosition(), false);
+    }
 }

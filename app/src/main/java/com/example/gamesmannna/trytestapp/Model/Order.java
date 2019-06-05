@@ -1,15 +1,24 @@
 package com.example.gamesmannna.trytestapp.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Gamesmannna on 12.06.2018.
  */
 
 public class Order {
+    @SerializedName("movieId")
     private String MovieId;
+    @SerializedName("movieName")
     private String MovieName;
+    @SerializedName("quantity")
     private String Quantity;
+    @SerializedName("price")
     private String Price;
+    @SerializedName("discount")
     private String Discount;
+    @SerializedName("orderID")
+    private String OrderId;
 
     public Order() {
     }
@@ -60,5 +69,13 @@ public class Order {
 
     public void setDiscount(String discount) {
         Discount = discount;
+    }
+
+    public String getOrderId() {
+        return OrderId;
+    }
+
+    public void setOrderId(String orderId) {
+        OrderId = orderId;
     }
 }

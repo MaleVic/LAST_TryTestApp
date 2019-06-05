@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/edtPhone"
+        android:id="@+id/edtRegPhone"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="42dp"
@@ -18,13 +18,13 @@
         android:ems="10"
         android:hint="Введите номер телефона"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edtRegPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edtPassword"
+        android:id="@+id/edtRegPassword"
         android:layout_width="249dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toTopOf="@+id/SignInButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegPhone" />
 
     <info.hoang8f.widget.FButton
         android:id="@+id/SignInButton"
@@ -50,7 +50,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegPassword"
         app:shadowColor="@color/colorPrimaryDark"
         app:shadowEnabled="true"
         app:shadowHeight="5dp" />

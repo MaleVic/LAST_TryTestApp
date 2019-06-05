@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import retrofit2.Callback;
+
 /**
  * Created by Gamesmannna on 12.06.2018.
  */
@@ -57,6 +59,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartViewHolder> {
         this.listData = listData;
         this.context = context;
     }
+
+
 
     @NonNull
     @Override
